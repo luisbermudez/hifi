@@ -242,6 +242,10 @@ void PhysicsEngine::stepSimulation() {
     float dt = 1.0e-6f * (float)(_clock.getTimeMicroseconds());
     _clock.reset();
     float timeStep = btMin(dt, MAX_TIMESTEP);
+    
+    if (_disableSimulations) {
+        return;
+    }
 
     if (_myAvatarController) {
         // TODO: move this stuff outside and in front of stepSimulation, because

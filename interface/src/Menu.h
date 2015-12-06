@@ -233,6 +233,7 @@ namespace MenuOption {
     const QString PhysicsShowOwned = "Highlight Simulation Ownership";
     const QString PhysicsShowHulls = "Draw Collision Hulls";
     const QString PhysicsDisableCollisions = "Disable Collisions";
+    const QString PhysicsDisableSimulations = "Disable Simulations";
     const QString PipelineWarnings = "Log Render Pipeline Warnings";
     const QString Preferences = "Preferences...";
     const QString Quit =  "Quit";

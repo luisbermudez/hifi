@@ -85,6 +85,8 @@ public:
     const glm::vec3& getOriginOffset() const { return _originOffset; }
     
     void setDisableCollisions(const bool flag) { _collisionDispatcher->setDisableCollisions(flag); }
+    
+    void setDisableSimulations(const bool flag) { _disableSimulations = flag; }
 
     /// \brief call bump on any objects that touch the object corresponding to motionState
     void bump(ObjectMotionState* motionState);
@@ -125,6 +127,7 @@ private:
 
     bool _dumpNextStats = false;
     bool _hasOutgoingChanges = false;
+    bool _disableSimulations = false;
 
     QUuid _sessionID;
     CollisionEvents _collisionEvents;

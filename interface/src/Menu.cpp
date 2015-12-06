@@ -563,6 +563,7 @@ Menu::Menu() {
     addCheckableActionToQMenuAndActionHash(physicsOptionsMenu, MenuOption::PhysicsShowOwned);
     addCheckableActionToQMenuAndActionHash(physicsOptionsMenu, MenuOption::PhysicsShowHulls);
     addCheckableActionToQMenuAndActionHash(physicsOptionsMenu, MenuOption::PhysicsDisableCollisions);
+    addCheckableActionToQMenuAndActionHash(physicsOptionsMenu, MenuOption::PhysicsDisableSimulations);
 
     addCheckableActionToQMenuAndActionHash(developerMenu, MenuOption::DisplayCrashOptions, 0, true);
     addActionToQMenuAndActionHash(developerMenu, MenuOption::CrashInterface, 0, qApp, SLOT(crashApplication()));

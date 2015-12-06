@@ -1109,6 +1109,7 @@ void Application::paintGL() {
     }
     
     _physicsEngine->setDisableCollisions(Menu::getInstance()->isOptionChecked(MenuOption::PhysicsDisableCollisions));
+    _physicsEngine->setDisableSimulations(Menu::getInstance()->isOptionChecked(MenuOption::PhysicsDisableSimulations));
 
     // Some plugins process message events, potentially leading to
     // re-entering a paint event.  don't allow further processing if this
