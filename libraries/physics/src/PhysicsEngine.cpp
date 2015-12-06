@@ -53,7 +53,7 @@ PhysicsEngine::~PhysicsEngine() {
 void PhysicsEngine::init() {
     if (!_dynamicsWorld) {
         _collisionConfig = new btDefaultCollisionConfiguration();
-        _collisionDispatcher = new btCollisionDispatcher(_collisionConfig);
+        _collisionDispatcher = new ToggleCollisionDispatcher(_collisionConfig);
         _broadphaseFilter = new btDbvtBroadphase();
         _constraintSolver = new btSequentialImpulseConstraintSolver;
         _dynamicsWorld = new ThreadSafeDynamicsWorld(_collisionDispatcher, _broadphaseFilter, _constraintSolver, _collisionConfig);

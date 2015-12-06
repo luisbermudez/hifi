@@ -24,6 +24,7 @@
 #include "ObjectMotionState.h"
 #include "ThreadSafeDynamicsWorld.h"
 #include "ObjectAction.h"
+#include "ToggleCollisionDispatcher.h"
 
 const float HALF_SIMULATION_EXTENT = 512.0f; // meters
 
@@ -82,6 +83,8 @@ public:
 
     /// \return position of simulation origin in domain-frame
     const glm::vec3& getOriginOffset() const { return _originOffset; }
+    
+    void setDisableCollisions(const bool flag) { _collisionDispatcher->setDisableCollisions(flag); }
 
     /// \brief call bump on any objects that touch the object corresponding to motionState
     void bump(ObjectMotionState* motionState);
@@ -105,7 +108,7 @@ private:
 
     btClock _clock;
     btDefaultCollisionConfiguration* _collisionConfig = NULL;
-    btCollisionDispatcher* _collisionDispatcher = NULL;
+    ToggleCollisionDispatcher* _collisionDispatcher = NULL;
     btBroadphaseInterface* _broadphaseFilter = NULL;
     btSequentialImpulseConstraintSolver* _constraintSolver = NULL;
     ThreadSafeDynamicsWorld* _dynamicsWorld = NULL;

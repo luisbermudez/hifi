@@ -1107,6 +1107,8 @@ void Application::paintGL() {
     if (Menu::getInstance()->isOptionChecked(MenuOption::DisableRendering) || nullptr == _displayPlugin) {
         return;
     }
+    
+    _physicsEngine->setDisableCollisions(Menu::getInstance()->isOptionChecked(MenuOption::PhysicsDisableCollisions));
 
     // Some plugins process message events, potentially leading to
     // re-entering a paint event.  don't allow further processing if this
