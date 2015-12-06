@@ -12,9 +12,6 @@
 #define hifi_ToggleCollisionDispatcher_h
 
 #include <btBulletDynamicsCommon.h>
-#include <BulletCollision/CollisionDispatch/btGhostObject.h>
-
-#include "Menu.h"
 
 class ToggleCollisionDispatcher: public btCollisionDispatcher {
 public:
