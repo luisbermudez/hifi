@@ -175,6 +175,7 @@ namespace MenuOption {
     const QString DisableEyelidAdjustment = "Disable Eyelid Adjustment";
     const QString DisableLightEntities = "Disable Light Entities";
     const QString DisableNackPackets = "Disable Entity NACK Packets";
+    const QString DisableRendering = "Disable Rendering";
     const QString DiskCacheEditor = "Disk Cache Editor";
     const QString DisplayCrashOptions = "Display Crash Options";
     const QString DisplayHandTargets = "Show Hand Targets";

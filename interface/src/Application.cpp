@@ -1104,7 +1104,7 @@ void Application::paintGL() {
     PROFILE_RANGE(__FUNCTION__);
     PerformanceTimer perfTimer("paintGL");
 
-    if (nullptr == _displayPlugin) {
+    if (Menu::getInstance()->isOptionChecked(MenuOption::DisableRendering) || nullptr == _displayPlugin) {
         return;
     }
 

@@ -341,6 +341,8 @@ Menu::Menu() {
         0, // QML Qt::SHIFT | Qt::Key_L,
         dialogsManager.data(), SLOT(lodTools()));
     
+    addCheckableActionToQMenuAndActionHash(renderOptionsMenu, MenuOption::DisableRendering, 0, false);
+    
     MenuWrapper* assetDeveloperMenu = developerMenu->addMenu("Assets");
     
     auto& assetDialogFactory = AssetUploadDialogFactory::getInstance();
