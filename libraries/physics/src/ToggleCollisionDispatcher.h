@@ -15,7 +15,9 @@
 
 class ToggleCollisionDispatcher: public btCollisionDispatcher {
 public:
-    using btCollisionDispatcher::btCollisionDispatcher;
+    
+    ToggleCollisionDispatcher(btCollisionConfiguration* collisionConfiguration)
+    : btCollisionDispatcher(collisionConfiguration) { }
     
     bool needsCollision(const btCollisionObject* body0,const btCollisionObject* body1) { return !(_disableCollisions) && btCollisionDispatcher::needsCollision( body0, body1 ); };
     
